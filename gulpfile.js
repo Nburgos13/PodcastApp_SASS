@@ -16,8 +16,8 @@ function css(done) {
   src("src/scss/app.scss")
     .pipe(sourcemaps.init())
     .pipe(sass())
-    //.pipe(postcss([autoprefixer(), cssnano()])) "Cuando estamos en produccion, descativamos nano"
-    .pipe(postcss([autoprefixer()])) // "Cuando estamos en produccion solo activamos autoprefixer"
+    .pipe(postcss([autoprefixer(), cssnano()])) //"Cuando estamos en produccion, descativamos nano"
+    //.pipe(postcss([autoprefixer()])) // "Cuando estamos en produccion solo activamos autoprefixer"
     .pipe(sourcemaps.write("."))
     .pipe(dest("build/css"));
 
